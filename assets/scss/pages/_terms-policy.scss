@@ -1,0 +1,25 @@
+/* Terms & Conditions */
+.cr-common-wrapper {
+    padding: 24px 24px 0 24px;
+    border: 1px solid $border-color;
+    border-radius: $radius;
+    background-color: #fff;
+    .cr-cgi-block {
+        margin-bottom: 24px;
+        h5 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        p {
+            line-height: 28px;
+        }
+    }
+}
+
+/*  Responsive  */
+@media only screen and (max-width: 991px) {
+    .spacing-991 {
+        margin-bottom: 24px;
+    }
+}

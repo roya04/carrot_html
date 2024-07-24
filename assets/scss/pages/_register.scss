@@ -1,0 +1,45 @@
+/* Register */
+.cr-register {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background-color: $fff;
+    border: 1px solid $border-color;
+    border-radius: $radius;
+
+    form {
+        .form-group {
+            label {
+                margin-bottom: 9px;
+                color: $text-444;
+                font-size: 15px;
+                font-weight: 500;
+                letter-spacing: 0;
+                line-height: 1;
+            }
+
+            .cr-form-control {
+                font-size: 14px;
+                color: $text-777;
+            }
+        }
+    }
+}
+
+.cr-register-buttons {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    button {
+        margin-right: 15px;
+        padding: 8px 20px;
+    }
+
+    .link {
+        padding: 8px 0;
+        color: $text-777;
+    }
+}

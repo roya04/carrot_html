@@ -1,0 +1,156 @@
+/* Product-banner */
+.section-product-banner {
+    position: relative;
+
+    &::before {
+        width: 45px;
+        height: 80px;
+        content: "";
+        background-image: url("../img/shape/8.png");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 130px;
+        right: 20px;
+        z-index: 0;
+    }
+}
+
+.cr-product-banner-image {
+    position: relative;
+
+    img {
+        width: 100%;
+        border-radius: $radius;
+    }
+
+    .cr-product-banner-contain {
+        padding: 24px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: left;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: center;
+
+        p {
+            padding-bottom: 15px;
+            font-family: $font-family-Poppins;
+            font-size: 14px;
+            line-height: 1.2;
+            color: $text-777;
+
+            .percent {
+                margin-right: 5px;
+                font-size: 20px;
+                font-weight: bold;
+                color: $main-primary-color;
+            }
+
+        }
+
+        h5 {
+            margin-bottom: 15px;
+            font-family: $font-family-Manrope;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1.2;
+            text-transform: capitalize;
+            color: $title-color;
+        }
+    }
+}
+
+/* Responsive */
+@media only screen and (max-width: 1399px) {
+    .cr-product-banner-image {
+        .cr-product-banner-contain {
+            h5 {
+                font-size: 18px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 991px) {
+    .section-product-banner {
+        &:before {
+            width: 30px;
+            height: 55px;
+        }
+    }
+    .cr-product-banner-image {
+        .cr-product-banner-contain {
+            h5 {
+                font-size: 16px;
+            }
+            p {
+                .text {
+                    display: none;
+                }
+            }
+        }
+        .cr-button {
+            height: 32px;
+            padding: 8px 10px;
+        }
+    }
+}
+@media only screen and (max-width: 767px) {
+    .cr-product-banner-image {
+        .cr-product-banner-contain {
+            h5 {
+                font-size: 20px;
+            }
+        }
+    }
+    .cr-deal-rightside {
+        .cr-deal-content {
+            background-color: rgba(247, 247, 248, .9) !important;
+        }
+    }
+}
+@media only screen and (max-width: 575px) {
+    .section-product-banner{
+        &:before {
+            display: none;
+        }
+    }
+}
+@media only screen and (max-width: 520px) {
+    .cr-product-banner-image {
+        .cr-product-banner-contain {
+            h5 {
+                font-size: 18px;
+            }
+        }
+        .cr-product-banner-buttons {
+            bottom: 15px;
+        }
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .cr-product-banner-image {
+        .cr-product-banner-buttons {
+            bottom: 50px;
+        }
+    }
+}
+@media only screen and (max-width: 360px) {
+    .cr-product-banner-image {
+        .cr-product-banner-contain {
+            h5 {
+                margin-bottom: 8px;
+                font-size: 16px;
+            }
+            p {
+                padding-bottom: 10px;
+            }
+        }
+    }
+}

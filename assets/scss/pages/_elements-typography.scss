@@ -1,0 +1,81 @@
+/* elemets-typography */
+.typography {
+    .cr-fw-normal {
+        font-weight: 500;
+    }
+    .cr-fw-bold {
+        font-weight: 700;
+    }
+    .cr-lb {
+        padding-left: 10px;
+        border-left: 5px solid;
+    }
+    .cr-fc{
+        color: $title-color;
+    }
+    .cr-rb {
+        padding-right: 10px;
+        border-right: 5px solid;
+        text-align: right;
+    }
+    h1{
+        font-size: 38px;
+    }
+    .cr-disc, .cr-decimal, .cr-alpha, .cr-roman, .cr-greek, .cr-hebrew {
+        padding: 5px 20px;
+        margin-bottom: 0;
+        color: $text-777;
+        font-size: 18px;
+        line-height: 30px;
+        text-align: justify;
+        letter-spacing: 1px;
+        font-family: $font-family-Manrope;
+    }
+    .cr-disc {
+        li {
+            margin-bottom: 15px;
+            list-style-type: disc;
+        }
+    }
+    .cr-decimal {
+        li {
+            margin-bottom: 15px;
+            list-style-type: decimal;
+        }
+    }
+    .cr-alpha{
+        li{
+            list-style-type: upper-alpha;
+            &:not(:last-child){
+                margin-bottom: 15px;
+            }
+        }
+    }
+    .cr-roman{
+        li{
+            margin-bottom: 15px;
+            list-style-type: upper-roman;
+        }
+    }
+    .cr-greek{
+        li{
+            list-style-type: lower-greek;
+            &:not(:last-child){
+                margin-bottom: 15px;
+            }
+        }
+    }
+    .cr-hebrew{
+        li{
+            margin-bottom: 15px;
+            list-style-type: hebrew;
+        }
+    }
+}
+
+.typography {
+    h1, h2, h3, h4, h5 {
+        margin-bottom: 30px;
+        font-family: "Montserrat";
+    }
+}

@@ -1,0 +1,147 @@
+/* About */
+.cr-about {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h4.heading {
+        margin-bottom: 16px;
+        font-family: $font-family-Manrope;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 46px;
+    }
+
+    .elementor-text-editor {
+        p {
+            font-size: 14px;
+        }
+    }
+}
+
+.cr-about-image {
+    position: sticky;
+    top: 0;
+
+    img {
+        width: 100%;
+        border-radius: $radius;
+    }
+}
+
+.cr-about-content {
+    padding-top: 5px;
+
+    p {
+        font-size: 14px;
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+
+    .elementor-counter {
+        margin-top: 24px;
+        padding : 24px;
+        background-color: $off-white;
+        border-radius: $radius;
+        border: 1px solid $border-color;
+    }
+
+    h4.elementor {
+        font-family: $font-family-Manrope;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 1;
+        color: $text-color;
+        text-align: center;
+        letter-spacing: 0px;
+    }
+    .elementor-counter-number {
+        color: $main-primary-color;
+    }
+    .elementor-suffix {
+        margin-left: -12px;
+        font-size: 30px;
+    }
+    .elementor-counter-title {
+        text-align: center;
+        span {
+            font-family: $font-family-Manrope;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1;
+        }
+    }
+}
+
+/* Responsive */
+@media only screen and (max-width: 1199px) {
+    .cr-about-content {
+        .elementor-suffix {
+            margin-left: -5px;
+        }
+        h4.elementor {
+            font-size: 45px;
+        }
+
+        .elementor-counter-title {
+            span {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .cr-about {
+        h4.heading {
+            font-size: 28px;
+            line-height: 38px;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 991px) {
+    .cr-about-image {
+        margin-top: 30px;
+    }
+
+    .cr-about-content {
+        p {
+            display: block;
+        }
+    }
+
+    .cr-about {
+        h4.heading {
+            font-size: 25px;
+            line-height: 35px;
+        }
+    }
+    .cr-about-content {
+        h4.elementor {
+            font-size: 40px;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .cr-about {
+        h4.heading {
+            font-size: 22px;
+            line-height: 32px;
+        }
+    }
+    .cr-about-content {
+        h4.elementor {
+            font-size: 35px;
+        }
+    }
+}
+@media only screen and (max-width: 575px) {
+    .margin-575 {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+}

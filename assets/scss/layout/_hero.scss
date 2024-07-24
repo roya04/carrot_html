@@ -1,0 +1,381 @@
+/* Hero */
+.cr-hero-banner {
+    height: 80vh;
+    position: relative;
+    z-index: 1;
+    &::before {
+        width: 50px;
+        height: 50px;
+        content: "";
+        background-image: url("../img/shape/2.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 0;
+        opacity: .5;
+    }
+    &::after {
+        width: 100px;
+        height: 100px;
+        content: "";
+        background-image: url("../img/shape/5.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        z-index: 0;
+        animation : left-right 10s linear infinite;
+        opacity: .5;
+    }
+    @keyframes left-right{
+        0%{
+          left : 0px;
+        }
+        50%{
+          left : 50px;
+          transform: rotate(30deg);
+        }
+        100%{
+          left : 0px;
+        }
+      }
+      @keyframes rotate{
+        0%{
+            transform: rotate(0deg);
+        }
+        50%{
+          transform: rotate(30deg);
+        }
+        100%{
+            transform: rotate(0deg);
+        }
+      }
+    .container {
+        position: relative;
+        &::before {
+            width: 80px;
+            height: 80px;
+            content: "";
+            background-image: url("../img/shape/4.png");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            z-index: 0;
+            top: -15px;
+            left: 500px;
+            animation : rotate 10s linear infinite;
+            opacity: .5;
+        }
+        &::after {
+            width: 100px;
+            height: 100px;
+            content: "";
+            background-image: url("../img/shape/3.png");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            bottom: -30px;
+            right: 500px;
+            z-index: 0;
+            opacity: .5;
+        }
+    }
+}
+.section-hero {
+    .swiper-container-horizontal>.swiper-pagination-bullets {
+        bottom: 15px !important;
+    }
+}
+
+
+.cr-hero-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $black_600;
+}
+
+.cr-slider {
+    .swiper-wrapper {
+        .swiper-slide-active {
+            h5 {
+                animation: fadeInUp 2s both 1s;
+            }
+            h1 {
+                animation: fadeInUp 2s both 1.5s;
+            }
+            p {
+                animation: fadeInUp 2s both 2s;
+            }
+            .cr-last-buttons {
+                animation: fadeInUp 2s both 2.5s;
+            }
+        }
+    }
+}
+
+.cr-banner-image-one {
+    width: 100%;
+    background-image: url("../img/banner/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.cr-banner-image-two {
+    width: 100%;
+    background-image: url("../img/banner/banner-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.cr-left-side-contain {
+    max-width: 550px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    h5 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-family: $font-family-Poppins;
+        font-weight: 700;
+        span {
+            margin-right: 5px;
+            color: $main-primary-color;
+            font-weight: bold;
+            border-bottom: 2px solid $main-primary-color;
+        }
+    }
+    p {
+        font-size: 15px;
+    }
+    h1 {
+        margin-bottom: 25px;
+        font-size: 55px;
+        font-family: $font-family-Manrope;
+        font-weight: 800;
+        line-height: 68px;
+        color: $black;
+        position: relative;
+    }
+    .cr-last-buttons {
+        margin-top: 30px;
+        display: flex;
+        a {
+            margin-right: 20px;
+        }
+        h4 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 0px;
+            color: $text-color;
+            span {
+                font-size: 30px;
+                font-family: $font-family-Manrope;
+                font-weight: bold;
+                color: $black;
+            }
+        }
+    }
+}
+
+.cr-slider {
+    .swiper-pagination-bullet {
+        transition: all 0.3s ease 0s;
+        width: 15px;
+        height: 15px;
+        margin: 0 2.5px !important;
+        display: inline-block;
+        border-radius: 30px;
+        opacity: 1;
+        border: 1px solid $main-primary-color;
+        box-shadow: none;
+        background-color: transparent;
+    }
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background-color: $main-primary-color;
+    }
+}
+
+/* Responsive */
+@media only screen and (max-width: 1399px) {
+    .cr-hero-banner {
+        .container {
+            &::after {
+                right: 300px;
+            }
+        }
+    }
+
+    .cr-left-side-contain {
+        h1 {
+            font-size: 48px;
+            line-height: 56px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .cr-hero-banner {
+        height: 600px;
+        .container {
+            &::after {
+                right: 300px;
+            }
+        }
+    }
+
+    .cr-left-side-contain {
+        max-width: 400px;
+        height: 600px;
+        h1 {
+            font-size: 40px;
+            line-height: 46px;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 991px) {
+    .cr-left-side-contain {
+        h5 {
+            margin-bottom: 15px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 36px;
+            margin-bottom: 20px;
+        }
+        .cr-last-buttons {
+            margin-top: 18px;
+        }
+    }
+
+    .cr-hero-banner {
+        .container {
+            &::after {
+                right: 200px;
+            }
+        }
+    }
+
+    .cr-hero-banner {
+        &::after {
+            width: 56px;
+            height: 50px;
+        }
+        .container {
+            &::after {
+                width: 60px;
+                right: 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .cr-left-side-contain {
+        h1 {
+            font-size: 24px;
+        }
+        h5 {
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+    .cr-hero-banner {
+        height: 500px;
+        .container {
+            &::after {
+                right: -80px;
+            }
+        }
+    }
+
+    .cr-left-side-contain {
+        max-width: 290px;
+        height: 500px;
+        p {
+            font-size: 14px;
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .cr-hero-banner {
+        .container {
+            &::after {
+                right: 10px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 480px) {
+    .cr-left-side-contain {
+        max-width: 250px;
+        height: 400px;
+        h1 {
+            margin-bottom: 0;
+        }
+    }
+    .cr-hero-banner {
+        height: 400px;
+    }
+    .cr-slider {
+        .swiper-wrapper {
+            .swiper-slide {
+                p {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 360px) {
+    .cr-left-side-contain {
+        height: 350px;
+    }
+    .cr-hero-banner {
+        height: 350px;
+    }
+    .cr-left-side-contain {
+        max-width: 210px;
+        h1 {
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+}
+@media only screen and (max-width: 320px) {
+    .cr-left-side-contain {
+        h1 {
+            font-size: 22px;
+            line-height: 24px;
+            margin-bottom: 10px;
+        }
+    }
+    .cr-hero-banner {
+        &::after {
+            height: 40px;
+            width: 40px;
+        }
+        .container {
+            &::after {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}

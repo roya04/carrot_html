@@ -1,0 +1,138 @@
+/* Category 2 */
+.category-block {
+    margin-top: 30px;
+    background-color: #f7f7f8;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    &:hover {
+        .category-icon {
+                -webkit-animation-name: wobble;
+                animation-name: wobble;
+                -webkit-animation-duration: 0.8s;
+                -webkit-animation-iteration-count: 0.8s;
+                -webkit-animation-timing-function: linear;
+                -webkit-transform-origin: 50% 100%;
+        }
+    }
+    @-webkit-keyframes wobble {
+        0% {
+          -webkit-transform: none;
+          transform: none;
+        }
+        15% {
+          -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+          transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+        }
+        30% {
+          -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+          transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+        }
+        45% {
+          -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+          transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+        }
+        60% {
+          -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+          transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+        }
+        75% {
+          -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+          transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+        }
+        100% {
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes wobble {
+        0% {
+          -webkit-transform: none;
+          transform: none;
+        }
+        15% {
+          -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+          transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+        }
+        30% {
+          -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+          transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+        }
+        45% {
+          -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+          transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+        }
+        60% {
+          -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+          transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+        }
+        75% {
+          -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+          transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+        }
+        100% {
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+    .category-icon {
+        width: 80px;
+        height: 80px;
+        margin: -40px auto 0 auto;
+        background-color: #f7f7f7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 10px solid #fff;
+        i {
+            font-size: 30px;
+            line-height: 30px;
+        }
+        &:after {
+            width: 80px;
+            height: 41px;
+            content: "";
+            position: absolute;
+            top: 30px;
+            border: 1px solid #eee;
+            border-bottom-left-radius: 100px;
+            border-bottom-right-radius: 100px;
+            border-top: none;
+            z-index: 0;
+        }
+    }
+    .icon-1 {
+        background-color: #ffeae9;
+    }
+    .icon-2 {
+        background-color: #fff6ec;
+    }
+    .icon-3 {
+        background-color: #e2fde2;
+    }
+    .icon-4 {
+        background-color: #ffeae9;
+    }
+    .icon-5 {
+        background-color: #fde1f5;
+    }
+    .icon-6 {
+        background-color: #ecf0ff;
+    }
+    .icon-7 {
+        background-color: #f9f9d9;
+    }
+    .category-title {
+        padding-bottom: 15px;
+        text-align: center;
+        h4 {
+            margin: 15px 0 5px 0;
+            font-size: 16px;
+            color: $title-color;
+        }
+        p{
+            color: $text-777;
+            font-size: 12px;
+        }
+    }
+}

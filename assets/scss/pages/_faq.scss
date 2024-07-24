@@ -1,0 +1,59 @@
+/* Faq */
+.cr-faq{
+    .accordion {
+        .accordion-item {
+            border: 1px solid $border-color;
+            border-radius: 5px;
+            &:not(:nth-child(1)) {
+                margin-top: 10px;
+            }
+            .accordion-button {
+                padding: 15px;
+                background-color: transparent;
+                font-family: $font-family-Poppins;
+                font-size: 16px;
+                color: $black;
+                &::after {
+                    background: none;
+                    font-family: remixicon;
+                    content: "\EA6E";
+                    font-size: 22px;
+                    transform: rotate(0);
+                    line-height: 21px;
+                }
+                &:not(.collapsed) {
+                    &::after {
+                        background: none;
+                        font-family: remixicon;
+                        content: "\EA6E";
+                        font-size: 22px;
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+            .accordion-collapse {
+                border-top: 1px solid $border-color;
+                .accordion-body {
+                    padding: 15px;
+                    position: relative;
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+.cr-faq-img {
+    img{
+        width: 100%;
+        border-radius: $radius;
+    }
+}
+
+/**  Responsive  **/
+@media only screen and (max-width: 991px) {
+    .cr-faq-img {
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,114 @@
+/* services- */
+.section-services {
+    position: relative;
+    &::before {
+        width: 80px;
+        height: 80px;
+        content: "";
+        background-image: url("../img/shape/7.png");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 20px;
+        z-index: 0;
+    }
+}
+
+.cr-services {
+    padding: 24px;
+    background-color: $off-white;
+    border-radius: $radius;
+    border: 1px solid $card-border-color;
+    display: flex;
+    flex-direction: column;
+    .cr-services-image {
+        margin: auto auto 12px auto;
+        display: block;
+        i {
+            font-size: 43px;
+            line-height: 40px;
+            color: $main-primary-color;
+        }
+    }
+    .cr-services-contain {
+        h4 {
+            margin-bottom: 5px;
+            font-size: 18px;
+            font-family: $font-family-Poppins;
+            color: $title-color;
+            font-weight: bold;
+            line-height: 1.667;
+            font-weight: 600;
+            text-align: center;
+        }
+        p {
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: 300;
+            text-align: center;
+        }
+    }
+}
+
+.cr-services-border {
+
+    .col-3 {
+        &:not(:last-child) {
+            border-right: 1px solid $border-color;
+        }
+    }
+}
+
+/* Responsive */
+@media only screen and (max-width: 1399px) {
+    .cr-services {
+        .cr-services-contain {
+            h4 {
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .section-services {
+        &::before {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .cr-services {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .cr-services-image {
+            margin-bottom: 12px;
+            padding: 0;
+        }
+        .cr-services-contain {
+            text-align: center;
+            h4 {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .section-services {
+        &::before {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .section-services {
+        &:before {
+            display: none;
+        }
+    }
+}

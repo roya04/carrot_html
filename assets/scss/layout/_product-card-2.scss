@@ -1,0 +1,365 @@
+/* Product card 2 */
+.product-card-2 {
+    margin-bottom: 24px;
+    &:hover {
+        .cr-pro-image {
+            .hover-image {
+                opacity: 1;
+            }
+        } 
+    }
+    .cr-product-inner {
+        border: 1px solid #eee;
+        border-radius: 5px;
+        overflow: hidden;
+        background: #fff;
+        &:hover {
+            .cr-pro-actions {
+                bottom: 15px;
+                opacity: 1;
+            }
+        }
+        .cr-pro-actions {
+            @include ease3;
+            width: calc(100% - 24px);
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            left: auto;
+            right: auto;
+            bottom: -30px;
+            opacity: 0;
+            a {
+                @include ease3;
+                width: 30px;
+                height: 30px;
+                margin: 0 1px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #fff;
+                color: $title-color;
+                border-radius: 5px;
+                border: 1px solid #eee;
+                &:hover {
+                    background-color: $main-primary-color;
+                    i {
+                        color: #fff;
+                    }
+                }
+                i {
+                    font-size: 14px;
+                }
+            }
+            .cr-shopping-bag.active {
+                background-color: $main-primary-color;
+            }
+            .wishlist.active {
+                background-color: $main-primary-color;
+            }
+        }
+    }
+    .cr-pro-image {
+        position: relative;
+        border-bottom: 1px solid #eee;
+        overflow: hidden;
+        padding: 12px;
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .main-image {
+            border: 1px solid #eee;
+        }
+        .hover-image {
+            @include ease3;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+        .flags {
+            position: absolute;
+            z-index: 8;
+            top: 12px;
+            right: auto;
+            left: 12px;
+            display: flex;
+            flex-direction: column;
+            span {
+                margin-bottom: 3px;
+                font-size: 11px;
+                font-weight: 600;
+                line-height: 20px;
+                padding: 0 8px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #ffffff;
+                letter-spacing: 1px;
+            }
+            .sale {
+                display: flex;
+                background-color: #64b496;
+            }
+            .new {
+                display: flex;
+                background-color: #ff5b5b;
+            }
+            .trending {
+                display: flex;
+                background-color: #7d76ff;
+            }
+        }        
+    }
+    .cr-pro-content {
+        padding: 15px;
+        .cr-info {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a {
+                color: $text-999;
+                font-size: 14px;
+            }
+        }
+        .cr-pro-title {
+            margin-bottom: 15px;
+            a {
+                @include ease3;
+                text-decoration: none;
+                color: $title-color;
+                display: block;
+                font-size: 14px;
+                line-height: 22px;
+                font-weight: 400;
+                letter-spacing: 0.85px;
+                text-transform: capitalize;
+                font-family: $font-family-Poppins;
+                &:hover {
+                    color: $main-primary-color;
+                }
+            }
+        }
+        .cr-pro-rating {
+            display: flex;
+            i {
+                margin-left: 2px;
+                color: #bbb;
+                font-size: 14px;
+            }
+            i.fill {
+                color: #fd575d;
+            }
+        }
+        .cr-price {
+            margin-bottom: 15px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            color: $text-777;
+            line-height: 16px;
+            span.old-price {
+                font-size: 13px;
+                margin-left: 10px;
+                text-decoration: line-through;
+                color: $text-777;
+            }
+            span.new-price {
+                color: $title-color;
+                font-weight: 600;
+                font-size: 15px;
+                font-family: $font-family-Manrope;
+            }
+        }
+        .cr-pro-option {
+            @include ease3;
+            width: 100%;
+            margin-top: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            opacity: .7;
+            &:hover {
+                opacity: 1;
+            }
+            .cr-pro-color {
+                ul{
+                    @include ease3;
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: row;
+                    li {
+                        @include ease3;
+                        width: 24px;
+                        height: 24px;
+                        padding: 1px;
+                        margin-right: 5px;
+                        display: flex;
+                        cursor: pointer;
+                        opacity: 0.8;
+                        border: 1px solid transparent;
+                        border-radius: $radius;
+                        a {
+                            span, img{
+                                @include ease3;
+                                pointer-events: none;
+                                width: 20px;
+                                height: 20px;
+                                display: block;
+                                cursor: pointer;
+                                border-radius: $radius;
+                            }
+                        }
+                        &:hover {
+                                    border: 1px solid #757575;
+                        }
+                    }
+                    li.active {
+                                border: 1px solid #757575;
+                    }
+                }
+            }
+            .cr-pro-size {
+                .cr-opt-size {
+                    @include ease3;
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: row;
+                    li {
+                        @include ease3;
+                        height: 24px;
+                        margin-right: 5px;
+                        padding: 1px;
+                        display: flex;
+                        cursor: pointer;
+                        opacity: 0.8;
+                        list-style: none;
+                        border: 1px solid transparent;
+                        border-radius: $radius;
+
+                        a {
+                            @include ease3;
+                            min-width: 20px;
+                            height: 20px;
+                            padding: 3px 5px;
+                            pointer-events: none;
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 12px;
+                            line-height: 24px;
+                            background-color: #e7e7e7;
+                            color: #777777;
+                            font-weight: 400;
+                            border-radius: $radius;
+                            
+                        }
+                        &:hover {
+                                border: 1px solid #000;
+                        }
+                    }
+                    li.active {
+                        border: 1px solid #000;
+                        a {
+                            background-color: #000;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.section-product {
+    .owl-carousel.new-product-slider {
+        &:hover {
+            .owl-nav {
+            opacity: 1;
+            }
+        }
+        .owl-nav {
+            @include ease3;
+            opacity: 0;
+            button {
+                position: absolute;
+                height: 40px;
+                width: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #fff;
+                border: 1px solid #eee;
+                border-radius: 50%;
+                opacity: 1;
+                margin-top: auto;
+                margin-bottom: auto;
+                top: calc(50% - 15px);
+                transform: translateY(-50%);
+                cursor: pointer;
+                i {
+                    color: $title-color;
+                    font-size: 20px;
+                }
+    
+            }
+            .disabled {
+                i {
+                    color: $text-999;
+                }
+            }
+            .owl-prev {
+                    left: -18px;
+            }
+            .owl-next {
+                right: -18px;
+        }
+        }
+    }
+}
+
+/* Responsive */
+@media only screen and (max-width: 1199px) {
+    .d-n-1199 {
+        display: none;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .section-product {
+        .owl-carousel.new-product-slider {
+            .owl-nav {
+                display: none;
+            }
+        }
+    }
+    .product-card-2 {
+
+        .cr-product-inner {
+            .cr-pro-actions {
+                bottom: -1px;
+                opacity: 1;
+            }
+            &:hover {
+                .cr-pro-actions {
+                    bottom: 12px;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .d-n-1199 {
+        display: block;
+    }
+}
+
+    
